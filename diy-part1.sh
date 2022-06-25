@@ -18,3 +18,5 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 #sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 
 #sed -i '$a src-git helloworld https://github.com/P3TERX/helloworld' feeds.conf.default
+rm -rf target/linux/ramips
+svn export https://github.com/padavanonly/immortalwrt/trunk/target/linux/ramips target/linux/ramips

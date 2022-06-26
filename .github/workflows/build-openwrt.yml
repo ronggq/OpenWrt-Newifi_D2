@@ -11,7 +11,8 @@
 name: Build OpenWrt
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  #REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/padavanonly/immortalwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: open.config
@@ -69,8 +70,8 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        rm -rf target/linux/ramips/patches-5.10/710-at803x.patch
-        cp $GITHUB_WORKSPACE/710-at803x.patch target/linux/ramips/patches-5.10/710-at803x.patch
+        #rm -rf target/linux/ramips/patches-5.10/710-at803x.patch
+        #cp $GITHUB_WORKSPACE/710-at803x.patch target/linux/ramips/patches-5.10/710-at803x.patch
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
